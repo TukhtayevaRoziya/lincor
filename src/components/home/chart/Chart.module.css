@@ -1,0 +1,29 @@
+.body {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 32px;
+  margin-top: 3rem;
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+
+  color: #2F49D1;
+}
+
+@media screen and (max-width: 991.9px) {
+  .body {
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 0) and (max-width: 449.9px) {
+  .body{
+    display: none;
+  }
+}

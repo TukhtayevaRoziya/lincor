@@ -1,5 +1,6 @@
 import React from "react";
 import { FiBarChart2 } from "react-icons/fi";
+import { ChartBox } from "./chart/Chart";
 
 import styles from "./Home.module.css";
 
@@ -26,6 +27,8 @@ const Home = () => {
   return (
     <div>
       <div className={styles.card_block}>{dataMap}</div>
+      <ChartBox />
+
     </div>
   );
 };
