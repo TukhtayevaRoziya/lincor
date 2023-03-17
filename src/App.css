@@ -3,7 +3,7 @@ html,
 body {
   height: 100%;
 }
-
+:where(.css-ph9edi).ant-layout .ant-layout-sider-children,
 :where(.css-dev-only-do-not-override-ph9edi).ant-layout
   .ant-layout-sider-children {
   height: 100vh;
