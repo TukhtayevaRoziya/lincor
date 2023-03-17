@@ -1,0 +1,260 @@
+.ant-layout-sider,
+.ant-menu.ant-menu-dark,
+.ant-menu-dark .ant-menu-sub,
+.ant-menu.ant-menu-dark .ant-menu-sub,
+.ant-layout-sider-zero-width-trigger {
+  background: #0061f7 !important;
+}
+
+.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: #f3f4ff !important;
+  border-radius: 40px 0px 0px 40px;
+  box-shadow: 0px 20px 50px rgba(191, 21, 108, 0.05);
+}
+
+.ant-menu-dark.ant-menu-inline .ant-menu-item,
+.ant-menu-dark.ant-menu-inline .ant-menu-submenu-title {
+  height: 50px !important;
+}
+
+.ant-menu-inline.ant-menu-root .ant-menu-item,
+.ant-menu-inline.ant-menu-root .ant-menu-submenu-title {
+  transition: all 0.1s cubic-bezier(0.215, 0.61, 0.355, 1) !important;
+  margin: 0 0 0 auto;
+
+}
+
+.ant-layout-sider-children {
+  padding-left: 20px;
+  margin-top: 30px !important;
+  background: #0061f7 !important;
+}
+
+.ant-tooltip-arrow-content {
+  --antd-arrow-background-color: #a098ae !important;
+}
+
+.ant-tooltip {
+  color: #a098ae;
+}
+
+.ant-tooltip-inner {
+  min-height: auto !important;
+  padding: 0.5em 0.75em !important;
+  background: #a098ae !important;
+  border-radius: 20px !important;
+}
+
+:where(.css-dev-only-do-not-override-26rdvq).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-item:hover,
+:where(.css-dev-only-do-not-override-26rdvq).ant-dropdown-menu-submenu
+  .ant-dropdown-menu
+  .ant-dropdown-menu-item:hover,
+:where(.css-dev-only-do-not-override-26rdvq).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-submenu-title:hover,
+:where(.css-dev-only-do-not-override-26rdvq).ant-dropdown-menu-submenu
+  .ant-dropdown-menu
+  .ant-dropdown-menu-submenu-title:hover,
+:where(.css-dev-only-do-not-override-26rdvq).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-item-active,
+:where(.css-dev-only-do-not-override-26rdvq).ant-dropdown-menu-submenu
+  .ant-dropdown-menu
+  .ant-dropdown-menu-item-active,
+:where(.css-dev-only-do-not-override-26rdvq).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-submenu-title-active,
+:where(.css-dev-only-do-not-override-26rdvq).ant-dropdown-menu-submenu
+  .ant-dropdown-menu
+  .ant-dropdown-menu-submenu-title-active {
+  background-color: transparent;
+}
+
+.ant-menu-dark .ant-menu-item-selected .ant-menu-item-icon,
+.ant-menu-dark .ant-menu-item-selected .anticon,
+.ant-menu-dark .ant-menu-item-selected .ant-menu-item-icon + span,
+.ant-menu-dark .ant-menu-item-selected .anticon + span,
+.ant-menu-dark .ant-menu-item-selected > a,
+.ant-menu-dark .ant-menu-item-selected > span > a.active,
+.ant-menu-dark .ant-menu-item-selected > a.active:hover,
+.ant-menu-dark .ant-menu-item-selected > span > a.active:hover {
+  color: #0061f7 !important;
+}
+
+.anticon svg {
+  font-size: 18px;
+}
+
+.ant-menu-dark .ant-menu-item,
+.ant-menu-dark .ant-menu-item-group-title,
+.ant-menu-dark .ant-menu-item > a,
+.ant-menu-dark .ant-menu-item > span > a {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.ant-layout-sider {
+  width: 250px !important;
+  max-width: 250px !important;
+  min-width: 250px !important;
+  flex: 0 0 250px !important;
+  height: 100%;
+  grid-area: n1;
+}
+
+.ant-layout-content {
+  margin: 0 !important;
+}
+
+.site-layout-background,
+body {
+  background: #f3f4ff !important;
+}
+
+.ant-layout-sider-zero-width {
+  flex: 0 0 0px !important;
+  max-width: 0px !important;
+  min-width: 0px !important;
+  width: 0px !important;
+}
+
+.site-layout-sub-header-background {
+  height: auto !important;
+}
+
+.site-layout-background {
+  padding: 46px 50px !important;
+}
+
+:where(.css-dev-only-do-not-override-26rdvq).ant-menu-inline .ant-menu-item,
+:where(.css-dev-only-do-not-override-26rdvq).ant-menu-vertical .ant-menu-item,
+:where(.css-dev-only-do-not-override-26rdvq).ant-menu-inline
+  .ant-menu-submenu-title,
+:where(.css-dev-only-do-not-override-26rdvq).ant-menu-vertical
+  .ant-menu-submenu-title {
+  width: 100% !important;
+}
+
+:where(.css-dev-only-do-not-override-26rdvq).ant-pagination .ant-pagination-item:not(.ant-pagination-item-active):hover {
+  background-color: transparent;
+}
+
+:where(.css-dev-only-do-not-override-26rdvq).ant-pagination .ant-pagination-prev button, :where(.css-dev-only-do-not-override-26rdvq).ant-pagination .ant-pagination-next button{
+  color: #4D44B5;
+}
+
+:where(.css-dev-only-do-not-override-26rdvq).ant-pagination .ant-pagination-prev:hover .ant-pagination-item-link, :where(.css-dev-only-do-not-override-26rdvq).ant-pagination .ant-pagination-next:hover .ant-pagination-item-link {
+  background-color: transparent !important;
+}
+
+:where(.css-dev-only-do-not-override-26rdvq).ant-pagination .ant-pagination-item-active,
+:where(.css-26rdvq).ant-pagination .ant-pagination-item-active {
+  background-color: #4D44B5;
+  border: 2px solid #4D44B5 !important;
+}
+
+:where(.css-dev-only-do-not-override-26rdvq).ant-pagination .ant-pagination-item,
+:where(.css-26rdvq).ant-pagination .ant-pagination-item{
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #A098AE;
+}
+:where(.css-dev-only-do-not-override-26rdvq).ant-pagination .ant-pagination-item a,
+:where(.css-26rdvq).ant-pagination .ant-pagination-item a{
+  color: #A098AE;
+}
+
+:where(.css-dev-only-do-not-override-26rdvq).ant-pagination .ant-pagination-item-active a,
+li.ant-pagination-item.ant-pagination-item-1.ant-pagination-item-active a,
+li.ant-pagination-item.ant-pagination-item-2.ant-pagination-item-active a,
+:where(.css-dev-only-do-not-override-26rdvq).ant-pagination .ant-pagination-item-active:hover a {
+  color: #fff;
+}
+
+:where(.css-dev-only-do-not-override-26rdvq).ant-pagination .ant-pagination-prev .ant-pagination-item-link, :where(.css-dev-only-do-not-override-26rdvq).ant-pagination .ant-pagination-next .ant-pagination-item-link{
+  display: flex;
+  align-items: center;
+}
+
+ul.ant-pagination.css-dev-only-do-not-override-26rdvq,
+:where(.css-26rdvq).ant-pagination {
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+
+  margin: 1rem 0;
+}
+
+.RightAdminNavbarIcons1 {
+  border-bottom: 1px solid #a098ae;
+  border-radius: 0 !important;
+  color: #303030;
+}
+
+.RightAdminNavbarIcons3 {
+  padding-bottom: 10px !important;
+  display: flex;
+  align-items: center;
+}
+
+.RightAdminNavbarIcons3 span a {
+  display: flex;
+  align-items: center;
+}
+.RightAdminNavbarIcons3 span a svg{
+  margin-left: 10px;
+}
+
+:where(.css-dev-only-do-not-override-26rdvq).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):active{
+  background-color: #4d44b5 !important;
+}
+
+:where(.css-dev-only-do-not-override-26rdvq).ant-dropdown .ant-dropdown-menu,
+:where(.css-dev-only-do-not-override-26rdvq).ant-dropdown-menu-submenu
+  .ant-dropdown-menu {
+  padding: 0 !important;
+}
+
+.home_wrap{
+  width: calc(100% - 1px);
+}
+
+:where(.css-dev-only-do-not-override-26rdvq).ant-layout .ant-layout-sider-zero-width-trigger{
+  top: .8rem;
+}
+
+@media screen and (max-width: 991.9px) {
+  .home_wrap{
+    width: 90%;
+  }
+  .ant-layout-sider-children{
+    padding-left: 0;
+  }
+  .ant-layout-sider {
+    position: absolute !important;
+    z-index: 1;
+    box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px,
+      rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px,
+      rgb(0 0 0 / 9%) 0px -3px 5px;
+  }
+  .site-layout-background {
+    padding: 1rem 0 0 0 !important;
+  }
+  .dark {
+    opacity: 0.3;
+    height: 70vh;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.9px) {
+  .site-layout-background {
+    padding: 26px 30px !important;
+  }
+}
