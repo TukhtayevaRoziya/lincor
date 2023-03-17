@@ -127,7 +127,8 @@ body {
 
 .site-layout-background,
 body,
-section.ant-layout.css-dev-only-do-not-override-ph9edi {
+section.ant-layout.css-dev-only-do-not-override-ph9edi,
+section.ant-layout.css-ph9edi {
   background: #11111D !important;
 }
 
