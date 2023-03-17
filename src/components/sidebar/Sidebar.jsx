@@ -1,12 +1,13 @@
 import React from "react";
 import { NavLink, Route, Routes } from "react-router-dom";
-import { Layout, Menu, Select } from "antd";
+import { Layout, Menu } from "antd";
 import { AiOutlineHome } from "react-icons/ai";
 import { BsPersonLinesFill } from "react-icons/bs";
 import { GiTeacher } from "react-icons/gi";
 import { MdDateRange } from "react-icons/md";
-import { BiSun } from "react-icons/bi";
 import { IoLogOutOutline } from "react-icons/io5";
+
+import logo from '../../assets/logo.svg'
 
 import styles from "./Sidebar.module.css";
 import Home from "../home/Home";
@@ -54,9 +55,6 @@ const Sidebar = () => {
     icon: React.createElement(d.icon),
     label: <NavLink to={"/dashboard/" + d.path}>{d.label}</NavLink>,
   }));
-  const handleChange = (value) => {
-    console.log(`selected ${value}`);
-  };
 
   return (
     <Layout className={styles.mainWrap}>
@@ -73,10 +71,10 @@ const Sidebar = () => {
         }}
       >
         <div className="logo">
-          <h1 className={styles.logo}>
-            <span>A</span>
-            Akademi
-          </h1>
+          <img src={logo} alt="" className={styles.logo}>
+            {/* <span>A</span>
+            Akademi */}
+          </img>
         </div>
         <Menu
           theme="dark"
@@ -104,19 +102,6 @@ const Sidebar = () => {
             <h1 className={styles.title}>Xisobot</h1>
             <p>27.01.2022</p>
             <div className={styles.end_section_ofHeader}>
-              <Select
-                defaultValue="UZ"
-                style={{ width: 120 }}
-                onChange={handleChange}
-                options={[
-                  { value: "uz", label: "UZ" },
-                  { value: "en", label: "EN" },
-                  { value: "ru", label: "RU" },
-                ]}
-              />
-              <div className={styles.end_section_ofHeader_icons}>
-                <BiSun />
-              </div>
               <div className={styles.end_section_ofHeader_icons}>
                 <IoLogOutOutline />
               </div>

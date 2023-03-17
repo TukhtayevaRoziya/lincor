@@ -1,5 +1,6 @@
 body {
   overflow-x: hidden;
+  background-color: #1E1E1E;
 }
 
 h1,
@@ -35,7 +36,7 @@ body {
 
 .ant-menu-item-selected a,
 .ant-menu-item-selected a:hover {
-  color: #4d44b5 !important;
+  color: #fff !important;
 }
 
 :where(.css-dev-only-do-not-override-ph9edi).ant-select:not(

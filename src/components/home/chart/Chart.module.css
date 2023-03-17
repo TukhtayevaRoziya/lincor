@@ -1,5 +1,5 @@
 .body {
-  background-color: #fff;
+  background-color: #222235;
   border-radius: 20px;
   padding: 32px;
 }
@@ -11,7 +11,7 @@
   font-size: 24px;
   line-height: 36px;
 
-  color: #2F49D1;
+  color: #fff;
 }
 
 @media screen and (max-width: 991.9px) {
