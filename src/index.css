@@ -87,7 +87,7 @@ body {
   .ant-layout-sider-zero-width-trigger:hover::after,
 :where(.css-dev-only-do-not-override-ph9edi).ant-layout
   .ant-layout-sider-zero-width-trigger:hover::after {
-  background-color: transparent;
+  background-color: transparent !important;
 }
 
 @media screen and (max-width: 500.9px) {
