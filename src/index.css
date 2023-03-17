@@ -70,3 +70,9 @@ body {
 :where(.css-dev-only-do-not-override-ph9edi).ant-layout .ant-layout-sider-zero-width-trigger:hover::after{
   background-color: transparent;
 }
+
+@media screen and (max-width:500.9px) {
+  .ant-select{
+    display: none;
+  }
+}

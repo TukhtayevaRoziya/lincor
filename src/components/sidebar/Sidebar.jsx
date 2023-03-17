@@ -9,6 +9,7 @@ import { BiSun } from "react-icons/bi";
 import { IoLogOutOutline } from "react-icons/io5";
 
 import styles from "./Sidebar.module.css";
+import Home from "../home/Home";
 
 const { Header, Content, Sider } = Layout;
 
@@ -128,7 +129,7 @@ const Sidebar = () => {
               style={{ padding: 24, minHeight: 360 }}
             >
               <Routes>
-                <Route path="/" element={<>Hello</>} />
+                <Route path="/dashboard" element={<Home/>} />
                 {/* <Route path="/settings" element={<Settings />} />
                 <Route path="/students/*" element={<AllStudents />} />
                 <Route path="/students/add" element={<AddStudents />} />

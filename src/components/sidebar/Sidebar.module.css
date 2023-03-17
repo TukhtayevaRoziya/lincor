@@ -108,3 +108,18 @@
     padding: .5rem 0 !important;
   }
 }
+
+@media screen and (max-width:500.9px) {
+  .header p{
+    display: none;
+  }
+  .title{
+    font-size: 20px;
+  }
+  .end_section_ofHeader{
+    width: auto;
+  }
+  .end_section_ofHeader_icons{
+    margin-left: 5px;
+  }
+}
