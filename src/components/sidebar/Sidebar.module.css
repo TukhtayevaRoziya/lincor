@@ -89,9 +89,12 @@
     grid-template-areas: "n n" "n1  c";
     grid-template-columns: 54px 10fr;
     width: 100%;
+    background: #11111d;
+  }
+  :where(.css-ph9edi).ant-layout{
+    background: #11111d;
   }
   .header{
-    background-color: #0061f7;
     padding: 15px !important;
   }
   .end_section_ofHeader_icons{

@@ -76,7 +76,7 @@ body {
 :where(.css-dev-only-do-not-override-ph9edi).ant-layout
   .ant-layout-sider-zero-width-trigger,
 :where(.css-ph9edi).ant-layout .ant-layout-sider-zero-width-trigger {
-  background: #0061f7 !important;
+  background: #161624 !important;
   inset-inline-end: -54px;
   width: 60px;
   height: 74px;
