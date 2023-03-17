@@ -51,7 +51,7 @@ const Sidebar = () => {
     },
   ];
   const win = window.location.hash;
-
+  const day = date.getDay()
   const dataMap = data.map((d) => ({
     key: String(d.id),
     icon: React.createElement(d.icon),
@@ -102,7 +102,7 @@ const Sidebar = () => {
             style={{ padding: 0, width: "calc(100% - 1px)" }}
           >
             <h1 className={styles.title}>Xisobot</h1>
-            <p>{date.getDay()}.{date.getMonth()+1}.{date.getFullYear()}</p>
+            <p>{String(day).length === 1 ? "0"+day : day}.{date.getMonth()+1}.{date.getFullYear()}</p>
             <div className={styles.end_section_ofHeader}>
               <div className={styles.end_section_ofHeader_icons}>
                 <IoLogOutOutline />
