@@ -43,7 +43,7 @@
 }
 
 .end_section_ofHeader {
-  width: 180px;
+  width: auto;
   display: flex;
   justify-content: space-between;
   margin-right: 1rem;
@@ -72,6 +72,7 @@
   justify-content: center;
   font-size: 24px;
   cursor: pointer;
+  margin-left: 5px;
 }
 
 @media (min-width: 0) and (max-width: 991.9px) {
@@ -99,9 +100,6 @@
   }
   .end_section_ofHeader{
     width: auto;
-  }
-  .end_section_ofHeader_icons{
-    margin-right: 5px;
   }
 }
 
