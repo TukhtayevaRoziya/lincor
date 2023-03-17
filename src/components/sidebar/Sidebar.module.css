@@ -97,6 +97,12 @@
   .title {
     margin: 50px 0 0 30px;
   }
+  .end_section_ofHeader{
+    width: auto;
+  }
+  .end_section_ofHeader_icons{
+    margin-right: 5px;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1400.9px) {
