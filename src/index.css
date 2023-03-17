@@ -54,7 +54,7 @@ body {
 :where(.css-dev-only-do-not-override-ph9edi).ant-select-single .ant-select-selector{
   color: #000;
 }
-
+:where(.css-ph9edi).ant-layout .ant-layout-sider-zero-width-trigger,
 :where(.css-dev-only-do-not-override-ph9edi).ant-layout .ant-layout-sider-zero-width-trigger{
   top: 0;
 }
