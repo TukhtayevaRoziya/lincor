@@ -25,7 +25,7 @@ const Home = () => {
     );
   });
   return (
-    <div>
+    <div className={styles.home}>
       <div className={styles.card_block}>{dataMap}</div>
       <ChartBox />
 

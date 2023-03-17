@@ -1,3 +1,6 @@
+.home{
+  margin-bottom: 2rem;
+}
 .card_block {
   display: flex;
   flex-wrap: wrap;

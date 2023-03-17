@@ -2,7 +2,6 @@
   background-color: #fff;
   border-radius: 20px;
   padding: 32px;
-  margin-top: 3rem;
 }
 
 .title {
@@ -18,7 +17,10 @@
 @media screen and (max-width: 991.9px) {
   .body {
     padding: 1rem;
-    margin-top: 2rem;
+    width: calc(100% - 54px);
+  }
+  .title{
+    font-size: 20px;
   }
 }
 

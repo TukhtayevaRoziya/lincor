@@ -51,7 +51,7 @@ export const options = {
 export function ChartBox() {
   const chartData={
     data1: [20, 40, 60, 70, 20, 30, 80, 68, 14],
-    data2: [40, 70, 20, 30, 80, 40, 70, 28, 44],
+    data2: [40, 20, 70, 30, 80, 40, 70, 28, 44],
   }
   const { width } = useWindowSize()
 
@@ -75,9 +75,9 @@ export function ChartBox() {
 
   var num
   if (width < 692) {
-    num = 4
+    num = 3
   } else {
-    num = 9
+    num = 8
   }
   for (var i = 0; i < num; i++) {
     let dis = today.getMonth() - i
