@@ -59,7 +59,8 @@ body {
   top: 0;
 }
 
-:where(.css-dev-only-do-not-override-ph9edi).ant-layout .ant-layout-sider-zero-width-trigger{
+:where(.css-dev-only-do-not-override-ph9edi).ant-layout .ant-layout-sider-zero-width-trigger,
+:where(.css-ph9edi).ant-layout .ant-layout-sider-zero-width-trigger{
   background: #0061f7 !important;
   inset-inline-end: -54px;
   width: 60px;
