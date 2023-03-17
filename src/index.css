@@ -91,6 +91,12 @@ body {
   background-color: transparent !important;
 }
 
+:where(.css-dev-only-do-not-override-ph9edi).ant-menu .ant-menu-item .ant-menu-item-icon,
+:where(.css-ph9edi).ant-menu .ant-menu-item .ant-menu-item-icon{
+  min-width: 20px;
+  font-size: 19px;
+}
+
 @media screen and (max-width: 500.9px) {
   .ant-select,
   .ant-select {
