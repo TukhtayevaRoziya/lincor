@@ -16,6 +16,8 @@ const { Header, Content, Sider } = Layout;
 
 const Sidebar = () => {
   // const data = useSelector((state) => state.sidebarReducer);
+  let date = new Date();
+
   const data = [
     {
       id: 1,
@@ -100,7 +102,7 @@ const Sidebar = () => {
             style={{ padding: 0, width: "calc(100% - 1px)" }}
           >
             <h1 className={styles.title}>Xisobot</h1>
-            <p>27.01.2022</p>
+            <p>{date.getDay()}.{date.getMonth()+1}.{date.getFullYear()}</p>
             <div className={styles.end_section_ofHeader}>
               <div className={styles.end_section_ofHeader_icons}>
                 <IoLogOutOutline />
