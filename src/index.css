@@ -82,6 +82,7 @@ body {
   border-start-end-radius: 0;
   border-end-end-radius: 0;
 }
+:where(.css-ph9edi).ant-select:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector,
 :where(.css-ph9edi).ant-layout
   .ant-layout-sider-zero-width-trigger:hover::after,
 :where(.css-dev-only-do-not-override-ph9edi).ant-layout
