@@ -97,10 +97,6 @@
   .header{
     padding: 15px !important;
   }
-  .end_section_ofHeader_icons{
-    background-color: #fff;
-    color: #0061f7;
-  }
 }
 
 @media (min-width: 992px) and (max-width: 1199.9px) {
