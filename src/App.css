@@ -92,6 +92,7 @@ body {
   color: #fff !important;
 }
 
+:where(.css-ph9edi).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):active,
 :where(.css-dev-only-do-not-override-ph9edi).ant-menu-dark:not(
     .ant-menu-horizontal
   )
