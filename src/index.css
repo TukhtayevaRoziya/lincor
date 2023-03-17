@@ -68,6 +68,7 @@ body {
   border-start-end-radius: 0;
   border-end-end-radius: 0;
 }
+:where(.css-ph9edi).ant-layout .ant-layout-sider-zero-width-trigger:hover::after,
 :where(.css-dev-only-do-not-override-ph9edi).ant-layout .ant-layout-sider-zero-width-trigger:hover::after{
   background-color: transparent;
 }
