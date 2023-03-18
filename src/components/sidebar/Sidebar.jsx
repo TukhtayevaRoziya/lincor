@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, Route, Routes } from "react-router-dom";
 import { Layout, Menu } from "antd";
 import { AiOutlineHome } from "react-icons/ai";
@@ -6,18 +6,32 @@ import { BsPersonLinesFill } from "react-icons/bs";
 import { GiTeacher } from "react-icons/gi";
 import { MdDateRange } from "react-icons/md";
 import { IoLogOutOutline } from "react-icons/io5";
+import { TiMessages } from "react-icons/ti";
 
 import logo from '../../assets/logo.svg'
 
 import styles from "./Sidebar.module.css";
 import Home from "../home/Home";
+import Contact from "../contact/Contact";
+import { useReactPath } from "../../utility/hooks";
 
 const { Header, Content, Sider } = Layout;
 
 const Sidebar = () => {
   // const data = useSelector((state) => state.sidebarReducer);
+  const [myPath, setMyPath] = useState('/dashboard')
   let date = new Date();
-
+  const path = useReactPath();
+  React.useEffect(() => {
+    console.log(path)
+    // setMyPath(path)
+    // do something when path changes ...
+  }, [path])
+  console.log(myPath)
+const onClick = (url)=>{
+  // console.log(url)
+  setMyPath( url === '' ? 'Hello' : 'Bye')
+}
   const data = [
     {
       id: 1,
@@ -45,20 +59,20 @@ const Sidebar = () => {
     },
     {
       id: 5,
-      path: "settings",
-      label: "Settings",
-      icon: MdDateRange,
+      path: "contact",
+      label: "Contact",
+      icon: TiMessages,
     },
   ];
-  const win = window.location.hash;
+  const win = window.location.pathname;
   const day = date.getDay()
   const month = date.getMonth()+1
   const dataMap = data.map((d) => ({
     key: String(d.id),
     icon: React.createElement(d.icon),
-    label: <NavLink to={"/dashboard/" + d.path}>{d.label}</NavLink>,
+    label: <NavLink onClick={()=> onClick(path)} to={"/dashboard/" + d.path}>{d.label}</NavLink>,
   }));
-
+console.log(win)
   return (
     <Layout className={styles.mainWrap}>
       <Sider
@@ -83,13 +97,13 @@ const Sidebar = () => {
           theme="dark"
           mode="inline"
           defaultSelectedKeys={[
-            win === "#/dashboard/students/:id"
+            win === "/dashboard/students/:id"
               ? "2"
-              : win === "#/dashboard/teachers/*"
+              : win === "/dashboard/teachers/*"
               ? "3"
-              : win === "#/dashboard/events/*"
+              : win === "/dashboard/events/*"
               ? "4"
-              : win === "#/dashboard/settings/*"
+              : win === "/dashboard/contact/*"
               ? "5"
               : "1",
           ]}
@@ -118,6 +132,7 @@ const Sidebar = () => {
             >
               <Routes>
                 <Route path="/dashboard" element={<Home/>} />
+                <Route path="/dashboard/contact" element={<Contact/>} />
                 {/* <Route path="/settings" element={<Settings />} />
                 <Route path="/students/*" element={<AllStudents />} />
                 <Route path="/students/add" element={<AddStudents />} />

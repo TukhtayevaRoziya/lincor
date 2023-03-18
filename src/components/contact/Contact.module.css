@@ -1,0 +1,10 @@
+.title {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+
+  color: #0061f7;
+}
