@@ -95,7 +95,7 @@
     background: #11111d;
   }
   .header{
-    padding: 15px !important;
+    padding: 15px 0 15px 15px !important;
   }
 }
 
@@ -120,15 +120,19 @@
 
 @media screen and (max-width:500.9px) {
   .header p{
-    display: none;
+    font-size: 20px;
+    line-height: 30px;
   }
   .title{
     font-size: 20px;
   }
   .end_section_ofHeader{
     width: auto;
+    margin-right: 15px;
   }
   .end_section_ofHeader_icons{
     margin-left: 5px;
+    height: 50px;
+    width: 50px;
   }
 }
