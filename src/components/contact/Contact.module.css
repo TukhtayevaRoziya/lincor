@@ -9,6 +9,90 @@
   color: #0061f7;
 }
 
-.table_wrap{
+.table_wrap {
   margin-top: 32px;
+  overflow-x: auto;
+  /*  width: calc(100% - 60px); */
+}
+
+.table {
+  min-width: 1000px;
+  max-width: 100%;
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.table thead {
+  background: #2f49d1;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 120%;
+
+  color: #ffffff;
+}
+
+.table thead th {
+  padding: 20px;
+  width: 180px;
+  font-size: 18px;
+  box-sizing: border-box;
+  text-align: left;
+}
+.table thead th:last-child,
+.table thead th:nth-child(1) {
+  padding: 10px;
+  width: 20px;
+  text-align: center;
+}
+.table thead th:nth-child(4) {
+  width: 400px;
+}
+.table tbody tr td:nth-child(4){
+  text-align: left;
+}
+.table tbody tr {
+  position: relative;
+  border-bottom: 2px solid #00072D;
+}
+.table tbody tr:last-child{
+  border-bottom: none;
+}
+.table tbody td:first-child{
+  text-align: center;
+
+}
+.table tbody td {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+
+  color: #ffffff;
+  padding: 10px 20px;
+}
+.contact2{
+  padding-top: 5rem;
+}
+@media screen and (max-width: 991.9px) {
+  .contact {
+    padding-right: 54px;
+  }
+  .contact2{
+    padding-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .title{
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .contact,
+  .table_wrap{
+    margin-top: 1rem;
+  }
 }
