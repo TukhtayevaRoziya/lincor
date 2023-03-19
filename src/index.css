@@ -21,7 +21,7 @@ body {
 }
 
 .site-layout-sub-header-background {
-  background: #fff;
+  background: #161624;
 }
 
 .site-layout-background {
@@ -100,6 +100,89 @@ body {
 :where(.css-ph9edi).ant-menu .ant-menu-item .ant-menu-item-icon {
   min-width: 20px;
   font-size: 19px;
+}
+
+/* --------Contact-------- */
+:where(.css-dev-only-do-not-override-ph9edi).ant-table-wrapper .ant-table {
+  background-color: #222235 !important;
+  border-radius: 0;
+}
+:where(.css-dev-only-do-not-override-ph9edi).ant-table-wrapper
+  .ant-table-thead
+  > tr
+  > th,
+:where(.css-dev-only-do-not-override-ph9edi).ant-table-wrapper
+  .ant-table-thead
+  > tr
+  > td {
+  background-color: #161624;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+
+  color: #ffffff;
+  padding: 20px;
+}
+:where(.css-dev-only-do-not-override-ph9edi).ant-table-wrapper
+  .ant-table-container
+  table
+  > thead
+  > tr:first-child
+  > *:last-child,
+:where(.css-dev-only-do-not-override-ph9edi).ant-table-wrapper
+  .ant-table-container
+  table
+  > thead
+  > tr:first-child
+  > *:first-child {
+  border-radius: 0;
+}
+:where(.css-dev-only-do-not-override-ph9edi).ant-table-wrapper .ant-table {
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+:where(.css-dev-only-do-not-override-ph9edi).ant-table-wrapper
+  .ant-table-thead
+  > tr
+  > th:not(:last-child):not(.ant-table-selection-column):not(
+    .ant-table-row-expand-icon-cell
+  ):not([colspan])::before {
+  content: none;
+}
+
+:where(.css-dev-only-do-not-override-ph9edi).ant-table-wrapper
+  .ant-table-tbody
+  > tr.ant-table-row:hover
+  > th,
+:where(.css-dev-only-do-not-override-ph9edi).ant-table-wrapper
+  .ant-table-tbody
+  > tr.ant-table-row:hover
+  > td,
+:where(.css-dev-only-do-not-override-ph9edi).ant-table-wrapper
+  .ant-table-tbody
+  > tr
+  > th.ant-table-cell-row-hover
+  > td.ant-table-cell-row-hover {
+  background: #00072d;
+}
+
+thead.ant-table-thead tr th:nth-child(4) {
+  width: 30%;
+}
+thead.ant-table-thead tr th:nth-child(1) {
+  width: 5%;
+}
+
+td.ant-table-cell {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.01em;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 500.9px) {

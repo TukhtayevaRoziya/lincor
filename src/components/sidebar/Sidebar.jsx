@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink, Route, Routes } from "react-router-dom";
 import { Layout, Menu } from "antd";
 import { AiOutlineHome } from "react-icons/ai";
@@ -13,25 +13,13 @@ import logo from '../../assets/logo.svg'
 import styles from "./Sidebar.module.css";
 import Home from "../home/Home";
 import Contact from "../contact/Contact";
-import { useReactPath } from "../../utility/hooks";
 
 const { Header, Content, Sider } = Layout;
 
 const Sidebar = () => {
   // const data = useSelector((state) => state.sidebarReducer);
-  const [myPath, setMyPath] = useState('/dashboard')
   let date = new Date();
-  const path = useReactPath();
-  React.useEffect(() => {
-    console.log(path)
-    // setMyPath(path)
-    // do something when path changes ...
-  }, [path])
-  console.log(myPath)
-const onClick = (url)=>{
-  // console.log(url)
-  setMyPath( url === '' ? 'Hello' : 'Bye')
-}
+
   const data = [
     {
       id: 1,
@@ -70,7 +58,7 @@ const onClick = (url)=>{
   const dataMap = data.map((d) => ({
     key: String(d.id),
     icon: React.createElement(d.icon),
-    label: <NavLink onClick={()=> onClick(path)} to={"/dashboard/" + d.path}>{d.label}</NavLink>,
+    label: <NavLink to={"/dashboard/" + d.path}>{d.label}</NavLink>,
   }));
 console.log(win)
   return (

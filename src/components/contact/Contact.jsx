@@ -1,9 +1,9 @@
-import { Table } from 'antd';
 import React from 'react'
+import { Table } from 'antd';
+import {AiOutlineDelete} from 'react-icons/ai'
 import styles from './Contact.module.css'
 
 const Contact = () => {
-  
 
   const columns = [
     {
@@ -22,6 +22,10 @@ const Contact = () => {
       title: 'Izoh',
       dataIndex: 'comment',
     },
+    {
+      title: ' ',
+      dataIndex: 'action',
+    },
   ];
   
   const data = [];
@@ -32,13 +36,18 @@ const Contact = () => {
       nameOfStudent: `Edward King ${i}`,
       tel: 32,
       comment: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bibendum nascetur faucibus quam nunc mattis. Etiam ultrices vel nisl nisl nec sed.  ${i}`,
+      action: <AiOutlineDelete/>
+    
     });
   }
 
   return (
     <div>
       <h1 className={styles.title}>Bugungi murojatlar</h1>
+      <div className={styles.table_wrap}>
+
       <Table columns={columns} dataSource={data} />
+      </div>
     </div>
   )
 }
