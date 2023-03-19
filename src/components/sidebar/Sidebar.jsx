@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink, Route, Routes } from "react-router-dom";
 import { Layout, Menu } from "antd";
 import { AiOutlineHome } from "react-icons/ai";
-import { BsPersonLinesFill } from "react-icons/bs";
+import { FaGraduationCap } from "react-icons/fa";
 import { GiTeacher } from "react-icons/gi";
 import { MdDateRange } from "react-icons/md";
 import { IoLogOutOutline } from "react-icons/io5";
@@ -13,6 +13,7 @@ import logo from '../../assets/logo.svg'
 import styles from "./Sidebar.module.css";
 import Home from "../home/Home";
 import Contact from "../contact/Contact";
+import Students from "../students/Students";
 
 const { Header, Content, Sider } = Layout;
 
@@ -30,8 +31,8 @@ const Sidebar = () => {
     {
       id: 2,
       path: "students",
-      label: "Students",
-      icon: BsPersonLinesFill,
+      label: "O’quvchilar",
+      icon: FaGraduationCap,
     },
     {
       id: 3,
@@ -121,6 +122,7 @@ console.log(win)
               <Routes>
                 <Route path="/dashboard" element={<Home/>} />
                 <Route path="/dashboard/contact" element={<Contact/>} />
+                <Route path="/dashboard/students" element={<Students/>} />
                 {/* <Route path="/settings" element={<Settings />} />
                 <Route path="/students/*" element={<AllStudents />} />
                 <Route path="/students/add" element={<AddStudents />} />
