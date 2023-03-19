@@ -102,6 +102,46 @@ body {
   font-size: 19px;
 }
 
+/* -------contact pagination------- */
+:where(
+    .css-dev-only-do-not-override-ph9edi
+  ).ant-pagination.ant-pagination-simple
+  .ant-pagination-simple-pager
+  input {
+  background-color: #00072d;
+  font-size: 16px;
+  padding: 0.3rem;
+  border: none;
+  color: #fff;
+}
+:where(
+    .css-dev-only-do-not-override-ph9edi
+  ).ant-pagination.ant-pagination-simple
+  .ant-pagination-simple-pager {
+  height: auto;
+}
+
+:where(.css-dev-only-do-not-override-ph9edi).ant-pagination
+  .ant-pagination-disabled
+  .ant-pagination-item-link {
+  color: rgb(250 250 250 / 30%);
+}
+
+/* btn */
+:where(.css-dev-only-do-not-override-ph9edi).ant-pagination,
+:where(.css-dev-only-do-not-override-ph9edi).ant-pagination
+  .ant-pagination-prev
+  button,
+:where(.css-dev-only-do-not-override-ph9edi).ant-pagination
+  .ant-pagination-next
+  button {
+  color: #fff;
+}
+
+ul.ant-pagination.ant-pagination-simple.Contact_pagination__Gp9aV.css-dev-only-do-not-override-ph9edi {
+  display: flex;
+  justify-content: flex-end;
+}
 @media screen and (max-width: 500.9px) {
   .ant-select,
   .ant-select {

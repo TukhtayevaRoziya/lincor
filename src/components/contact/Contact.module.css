@@ -2,8 +2,8 @@
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 40px;
-  line-height: 48px;
+  font-size: 30px;
+  line-height: 40px;
   letter-spacing: 0.02em;
 
   color: #0061f7;
@@ -50,19 +50,18 @@
 .table thead th:nth-child(4) {
   width: 400px;
 }
-.table tbody tr td:nth-child(4){
+.table tbody tr td:nth-child(4) {
   text-align: left;
 }
 .table tbody tr {
   position: relative;
-  border-bottom: 2px solid #00072D;
+  border-bottom: 2px solid #00072d;
 }
-.table tbody tr:last-child{
+.table tbody tr:last-child {
   border-bottom: none;
 }
-.table tbody td:first-child{
+.table tbody td:first-child {
   text-align: center;
-
 }
 .table tbody td {
   font-family: "Inter", sans-serif;
@@ -74,25 +73,30 @@
   color: #ffffff;
   padding: 10px 20px;
 }
-.contact2{
+.contact2 {
   padding-top: 5rem;
+}
+.pagination {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
 }
 @media screen and (max-width: 991.9px) {
   .contact {
     padding-right: 54px;
   }
-  .contact2{
+  .contact2 {
     padding-top: 2rem;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .title{
+  .title {
     font-size: 20px;
     line-height: 25px;
   }
   .contact,
-  .table_wrap{
+  .table_wrap {
     margin-top: 1rem;
   }
 }

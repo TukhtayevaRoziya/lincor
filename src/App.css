@@ -3,6 +3,19 @@ html,
 body {
   height: 100%;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #11111D;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #0061f7;    /* color of the scroll thumb */
+  border-radius: 3px;
+}
+
 :where(.css-ph9edi).ant-layout .ant-layout-sider-children,
 :where(.css-dev-only-do-not-override-ph9edi).ant-layout
   .ant-layout-sider-children {

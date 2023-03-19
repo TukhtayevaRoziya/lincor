@@ -1,5 +1,5 @@
-import React from "react";
-import { Popconfirm } from "antd";
+import React, { useState } from "react";
+import { Pagination, Popconfirm } from "antd";
 import { AiOutlineDelete } from "react-icons/ai";
 
 import useWindowSize from "./../../utility/hooks";
@@ -7,8 +7,14 @@ import styles from "./Contact.module.css";
 
 const Contact = () => {
   const { width } = useWindowSize();
+  const pageSize = 2;
+  // const [data, setData] = useState([]);
+  const [current, setCurrent] = useState(1);
+  const [minIndex, setMinIndex] = useState(0);
+  const [maxIndex, setMaxIndex] = useState(pageSize);
 
   const data = [];
+
   for (let i = 0; i < 5; i++) {
     data.push({
       key: i,
@@ -28,58 +34,74 @@ const Contact = () => {
       ),
     });
   }
-  const dataMap = data.map(d=><tr key={d.key}>
-    <td>{d.num}</td>
-    <td>{d.nameOfStudent}</td>
-    <td>{d.tel}</td>
-    <td>{d.comment.length > 80 ? d.comment.slice(0, 80) + '...' : d.comment}</td>
-    <td>{d.action}</td>
-  </tr>)
+  const dataMap = data.map(
+    (d, index) =>
+      index >= minIndex &&
+      index < maxIndex && (
+        <tr key={d.key}>
+          <td>{d.num}</td>
+          <td>{d.nameOfStudent}</td>
+          <td>{d.tel}</td>
+          <td>
+            {d.comment.length > 80 ? d.comment.slice(0, 80) + "..." : d.comment}
+          </td>
+          <td>{d.action}</td>
+        </tr>
+      )
+  );
 
-const myWidth = width < 992 ? width - 120  :  width < 1200 ?  width - 350 : null
-
+  const myWidth = width < 992 ? width - 120 : width < 1200 ? width - 320 : null;
+  const onChange = (page) => {
+    setCurrent(page);
+    setMinIndex((page - 1) * pageSize);
+    setMaxIndex(page * pageSize);
+  };
   return (
     <>
-    <div className={styles.contact}>
-      <h1 className={styles.title}>Bugungi murojatlar</h1>
-      <div className={styles.table_wrap} style={{width: `${myWidth}px`}}>
-        <table className={styles.table}>
-          <thead>
-            <tr>
-              <th>№</th>
-              <th>O’quvchi ismi</th>
-              <th>Telefon nomer</th>
-              <th>Izoh</th>
-              <th> </th>
-            </tr>
-          </thead>
-          <tbody>
-            {dataMap}
-          </tbody>
-        </table>
-        {/* <Table className={styles.table} columns={columns} dataSource={data} /> */}
+      <div className={styles.contact}>
+        <h1 className={styles.title}>Bugungi murojatlar</h1>
+        <div className={styles.table_wrap} style={{ width: `${myWidth}px` }}>
+          <table className={styles.table}>
+            <thead>
+              <tr>
+                <th>№</th>
+                <th>O’quvchi ismi</th>
+                <th>Telefon nomer</th>
+                <th>Izoh</th>
+                <th> </th>
+              </tr>
+            </thead>
+            <tbody>{dataMap}</tbody>
+          </table>
+        </div>
       </div>
-    </div>
-    <div className={styles.contact + ' ' + styles.contact2}>
-      <h1 className={styles.title}>Kechagi murojatlar</h1>
-      <div className={styles.table_wrap} style={{width: `${myWidth}px`}}>
-        <table className={styles.table}>
-          <thead>
-            <tr>
-              <th>№</th>
-              <th>O’quvchi ismi</th>
-              <th>Telefon nomer</th>
-              <th>Izoh</th>
-              <th> </th>
-            </tr>
-          </thead>
-          <tbody>
-            {dataMap}
-          </tbody>
-        </table>
-        {/* <Table className={styles.table} columns={columns} dataSource={data} /> */}
+      <div className={styles.contact + " " + styles.contact2}>
+        <h1 className={styles.title}>Kechagi murojatlar</h1>
+        <div className={styles.table_wrap} style={{ width: `${myWidth}px` }}>
+          <table className={styles.table}>
+            <thead>
+              <tr>
+                <th>№</th>
+                <th>O’quvchi ismi</th>
+                <th>Telefon nomer</th>
+                <th>Izoh</th>
+                <th> </th>
+              </tr>
+            </thead>
+            <tbody>{dataMap}</tbody>
+          </table>
+
+          {/* <Table className={styles.table} columns={columns} dataSource={data} /> */}
+        </div>
+        <Pagination
+          className={styles.pagination}
+          simple
+          current={current}
+          onChange={onChange}
+          total={data.length}
+          pageSize={pageSize}
+        />
       </div>
-    </div>
     </>
   );
 };
