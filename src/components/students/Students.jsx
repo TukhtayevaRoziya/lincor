@@ -12,11 +12,15 @@ const Students = () => {
         </div>
         <div>
           <label id='student_tel'>Telefon raqam</label>
-          <input name='student_tel'/>
+          <input name='student_tel' type={'number'}/>
         </div>
         <div>
-          <label id='student_name'>O’quvchi ismi</label>
-          <input name='student_name'/>
+          <label id='student_route'>Yo’nalish</label>
+          <select name='student_route'>
+            <option value="motherLang">Ona-tili</option>
+            <option value="math">Matematika</option>
+            <option value="eng">English</option>
+          </select>
         </div>
         <div>
           <label id='student_name'>O’quvchi ismi</label>
