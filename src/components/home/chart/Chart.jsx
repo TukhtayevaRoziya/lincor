@@ -10,7 +10,7 @@ import {
   Legend,
   registerables,
 } from 'chart.js'
-import { Line } from 'react-chartjs-2'
+import { Bar } from 'react-chartjs-2'
 
 import styles from './Chart.module.css'
 import useWindowSize from '../../../utility/hooks.js'
@@ -50,8 +50,8 @@ export const options = {
 
 export function ChartBox() {
   const chartData={
-    data1: [20, 40, 60, 70, 20, 30, 80, 68, 14],
-    data2: [40, 20, 70, 30, 80, 40, 70, 28, 44],
+    data1: [20, 40, 60, 70, 20, 30, 80, 68, 14, 20],
+    data2: [40, 20, 70, 30, 80, 40, 70, 28, 44, 50],
   }
   const { width } = useWindowSize()
 
@@ -75,9 +75,9 @@ export function ChartBox() {
 
   var num
   if (width < 692) {
-    num = 3
+    num = 5
   } else {
-    num = 8
+    num = 10
   }
   for (var i = 0; i < num; i++) {
     let dis = today.getMonth() - i
@@ -93,6 +93,10 @@ export function ChartBox() {
           ? 8
           : dis === -5
           ? 7
+          : dis === -6
+          ? 6
+          : dis === -7
+          ? 5
           : dis
       ],
     )
@@ -106,10 +110,10 @@ export function ChartBox() {
         label: 'Jami o’quvchilar',
         data: chartData.data2,
         borderColor: '#2F49D1',
-        backgroundColor: '#fff',
+        backgroundColor: '#2F49D1',
         color: 'red',
         yAxisID: 'y',
-        borderWidth: 6,
+        borderWidth: 5,
         borderRadius: 70,
         circular: true,
       },
@@ -117,11 +121,11 @@ export function ChartBox() {
         label: 'Tark etganlar',
         data: chartData.data1,
         borderColor: '#E13468',
-        backgroundColor: '#fff',
+        backgroundColor: '#E13468',
         color: 'red',
         borderRadius: 70,
         yAxisID: 'y',
-        borderWidth: 6,
+        borderWidth: 5,
         circular: true,
       },
     ],
@@ -130,7 +134,7 @@ export function ChartBox() {
   return (
     <div className={styles.body}>
       <h1 className={styles.title}>2022-YIL statistika</h1>
-      <Line style={{ width: '100%' }} options={options} data={data} />
+      <Bar style={{ width: '100%' }} options={options} data={data} />
     </div>
   )
 }

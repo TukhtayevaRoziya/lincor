@@ -8,7 +8,19 @@ const Students = () => {
       <div>
         <div>
           <label id='student_name'>O’quvchi ismi</label>
-          <input name=''/>
+          <input name='student_name'/>
+        </div>
+        <div>
+          <label id='student_tel'>Telefon raqam</label>
+          <input name='student_tel'/>
+        </div>
+        <div>
+          <label id='student_name'>O’quvchi ismi</label>
+          <input name='student_name'/>
+        </div>
+        <div>
+          <label id='student_name'>O’quvchi ismi</label>
+          <input name='student_name'/>
         </div>
         </div>
 
