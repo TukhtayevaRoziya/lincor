@@ -24,7 +24,7 @@
 }
 
 .table thead {
-  background: #2f49d1;
+  background: #192152;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -72,23 +72,62 @@
   padding: 10px 20px;
 }
 .contact2 {
-  padding-top: 2rem;
+  padding-top: 4rem;
 }
 .pagination {
   margin-top: 2rem;
   display: flex;
   align-items: center;
 }
+.contact tbody td:has(svg) {
+  cursor: pointer;
+}
+.title_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title_wrap div {
+  width: 30%;
+
+  background: #192152;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+}
+.title_wrap input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #c4c4c4;
+  font-size: 20px;
+  width: 100%;
+}
+.title_wrap svg {
+  color: #c4c4c4;
+  font-size: 20px;
+  margin-right: 2px;
+}
 @media screen and (max-width: 991.9px) {
   .contact {
     padding-right: 54px;
-  }
-  .contact2 {
     padding-top: 2rem;
+  }
+  .title_wrap div {
+    width: 32%;
+  }
+  .title_wrap svg,
+  .title_wrap input {
+    font-size: 16px;
   }
 }
 
 @media screen and (max-width: 600px) {
+  .contact {
+    padding-top: 0;
+  }
   .title {
     font-size: 20px;
     line-height: 25px;
@@ -97,10 +136,26 @@
   .table_wrap {
     margin-top: 1rem;
   }
-  .contact tbody td{
+  .contact tbody td {
     font-size: 14px;
+    margin-top: 1rem;
   }
-  .contact .table thead th{
+  .contact .table thead th {
     font-size: 16px;
+  }
+  .title_wrap div {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .title_wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .title{
+    margin-bottom: 1rem;
+  }
+  .title_wrap div{
+    width: 100%;
   }
 }

@@ -35,13 +35,13 @@
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.02em;
-  color: #fff;
+  color: #C4C4C4;
 }
 .inp div input,
 .inp div select {
   width: 100%;
   margin-top: 1rem;
-  background: #ffffff;
+  background: #515C8D;
   border: 1px solid rgba(47, 73, 209, 0.6);
   border-radius: 8px;
   font-family: "Inter", sans-serif;
@@ -49,7 +49,7 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
-  color: #000000;
+  color: #C4C4C4;
   outline: none;
   margin-bottom: 2rem;
   padding: 12px;
@@ -67,7 +67,7 @@
 .inp button {
   width: 30%;
   margin-left: auto;
-  background: #2f49d1;
+  background: #192152;
   border-radius: 8px;
   padding: 13px 0;
   border: none;
@@ -84,6 +84,9 @@
   cursor: pointer;
 }
 @media screen and (max-width: 991.9px) {
+  .inp{
+    margin-right: 54px;
+  }
   .inp div,
   .inp button{
     width: 32%;
@@ -105,8 +108,12 @@
 }
 
 @media screen and (max-width: 600px) {
+  .inp{
+    margin-right: 0;
+    margin-top: 1rem;
+  }
   .title{
-    font-size: 25px;
+    font-size: 18px;
     line-height: 40px;
   }
   .inp{

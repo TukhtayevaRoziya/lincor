@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Pagination, Popconfirm } from "antd";
-import { AiOutlineDelete } from "react-icons/ai";
+import { AiOutlineDelete, AiOutlineSearch } from "react-icons/ai";
 
 import useWindowSize from "./../../utility/hooks";
 import styles from "./Contact.module.css";
@@ -58,7 +58,7 @@ const Contact = () => {
       )
   );
 
-  const myWidth = width < 992 ? width - 120 : width < 1200 ? width - 320 : null;
+  const myWidth = width < 992 ? width - 120 : width < 1300 ? width - 320 : null;
   const onChange = (page) => {
     setCurrent(page);
     setMinIndex((page - 1) * pageSize);
@@ -67,7 +67,14 @@ const Contact = () => {
   return (
     <>
       <div className={styles.contact + " " + styles.contact2}>
+        <div className={styles.title_wrap}>
         <h1 className={styles.title}>Bizning o’quvchilar</h1>
+        <div>
+    <AiOutlineSearch/>
+        <input />
+        </div>
+
+        </div>
         <div className={styles.table_wrap} style={{ width: `${myWidth}px` }}>
           <table className={styles.table}>
             <thead>
