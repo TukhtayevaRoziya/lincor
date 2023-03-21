@@ -36,7 +36,7 @@
 
 .table thead th {
   padding: 20px;
-  width: 180px;
+  width: 200px;
   font-size: 18px;
   box-sizing: border-box;
   text-align: left;
@@ -120,6 +120,9 @@
   }
   .title_wrap svg,
   .title_wrap input {
+    font-size: 16px;
+  }
+  .table tbody td{
     font-size: 16px;
   }
 }
