@@ -1,15 +1,11 @@
 import React from "react";
-import {AiOutlineDownload} from 'react-icons/ai'
 import Contact from "../contact/Contact";
 import styles from "./Students.module.css";
 
 const Students = () => {
-  const onClick = () => {
-    alert("true");
-  };
   return (
     <div className={styles.student}>
-      <h1 className={styles.title}>Yangi o’quvchi qo’shish </h1>
+      {/* <h1 className={styles.title}>Yangi o’quvchi qo’shish </h1>
       <div className={styles.inp}>
         <div>
           <label>O’quvchi ismi</label>
@@ -53,7 +49,7 @@ const Students = () => {
           />
         </div>
         <button onClick={onClick}>Qo'shish</button>
-      </div>
+      </div> */}
       <Contact />
     </div>
   );

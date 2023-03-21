@@ -72,7 +72,7 @@
   padding: 10px 20px;
 }
 .contact2 {
-  padding-top: 4rem;
+  padding-top: 0;
 }
 .pagination {
   margin-top: 2rem;
@@ -113,7 +113,7 @@
 @media screen and (max-width: 991.9px) {
   .contact {
     padding-right: 54px;
-    padding-top: 2rem;
+    padding-top: 1rem;
   }
   .title_wrap div {
     width: 32%;
