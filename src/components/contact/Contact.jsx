@@ -21,7 +21,9 @@ const Contact = () => {
       num: i + 1,
       nameOfStudent: `Edward King ${i}`,
       tel: "+" + 99890011386 + i,
-      comment: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bibendum nascetur faucibus quam nunc mattis. Etiam ultrices vel nisl nisl nec sed.  ${i}`,
+      route: `Lorem ipsum ${i}`,
+      parents: `Ota-ona(F.I.SH) ${i}`,
+      parentsTel: `Ota-ona (Tel) ${i}`,
       action: (
         <Popconfirm
           title="Delete the task"
@@ -43,7 +45,13 @@ const Contact = () => {
           <td>{d.nameOfStudent}</td>
           <td>{d.tel}</td>
           <td>
-            {d.comment.length > 80 ? d.comment.slice(0, 80) + "..." : d.comment}
+            {d.route}
+          </td>
+          <td>
+            {d.parents}
+          </td>
+          <td>
+            {d.parentsTel}
           </td>
           <td>{d.action}</td>
         </tr>
@@ -58,25 +66,8 @@ const Contact = () => {
   };
   return (
     <>
-      <div className={styles.contact}>
-        <h1 className={styles.title}>Bugungi murojatlar</h1>
-        <div className={styles.table_wrap} style={{ width: `${myWidth}px` }}>
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>№</th>
-                <th>O’quvchi ismi</th>
-                <th>Telefon nomer</th>
-                <th>Izoh</th>
-                <th> </th>
-              </tr>
-            </thead>
-            <tbody>{dataMap}</tbody>
-          </table>
-        </div>
-      </div>
       <div className={styles.contact + " " + styles.contact2}>
-        <h1 className={styles.title}>Kechagi murojatlar</h1>
+        <h1 className={styles.title}>Bizning o’quvchilar</h1>
         <div className={styles.table_wrap} style={{ width: `${myWidth}px` }}>
           <table className={styles.table}>
             <thead>
@@ -84,7 +75,9 @@ const Contact = () => {
                 <th>№</th>
                 <th>O’quvchi ismi</th>
                 <th>Telefon nomer</th>
-                <th>Izoh</th>
+                <th>Yo'nalish</th>
+                <th>Ota-ona(F.I.SH)</th>
+                <th>Ota-ona (Tel)</th>
                 <th> </th>
               </tr>
             </thead>

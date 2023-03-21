@@ -1,3 +1,7 @@
+.student{
+  margin-bottom: 2rem;
+}
+
 .title {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -7,4 +11,113 @@
   letter-spacing: 0.02em;
 
   color: #ffffff;
+}
+
+.inp {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.inp div {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.inp div label {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+.inp div input,
+.inp div select {
+  width: 100%;
+  margin-top: 1rem;
+  background: #ffffff;
+  border: 1px solid rgba(47, 73, 209, 0.6);
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+  outline: none;
+  margin-bottom: 2rem;
+  padding: 12px;
+}
+.inp div select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 50%;
+  padding: 1rem;
+  padding-right: 2rem;
+}
+
+.inp button {
+  width: 30%;
+  margin-left: auto;
+  background: #2f49d1;
+  border-radius: 8px;
+  padding: 13px 0;
+  border: none;
+  outline: none;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+
+  letter-spacing: 0.02em;
+
+  color: #ffffff;
+  cursor: pointer;
+}
+@media screen and (max-width: 991.9px) {
+  .inp div,
+  .inp button{
+    width: 32%;
+  }
+
+  .inp div label,
+  .inp button{
+    font-size: 18px;
+  }
+
+  .inp div input,
+  .inp div select {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: 8px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .title{
+    font-size: 25px;
+    line-height: 40px;
+  }
+  .inp{
+    justify-content: flex-start;
+  }
+  .inp div,
+  .inp button{
+    width: calc(100% - 54px);
+  }
+  .inp button{
+    margin: 0 auto 2rem 0;
+    padding: 8px 0;
+  }
 }
