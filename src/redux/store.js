@@ -4,11 +4,13 @@ import thunk from 'redux-thunk'
 // import authToken from '../utility/authToken'
 import { authReducer } from './reducers/authReducer'
 import { homeReducer } from './reducers/homeReducer';
+import { studentsReducer } from './reducers/studentsReducer';
 
 export const store = configureStore({
   reducer: {
     authReducer,
     homeReducer,
+    studentsReducer,
   },
   middleware: [thunk],
 })

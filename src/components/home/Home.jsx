@@ -3,7 +3,7 @@ import { FiBarChart2 } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
 
 import { ChartBox } from "./chart/Chart";
-import { getAction } from "./../../utility/api";
+import { getAction } from './../../redux/actions/readAction';
 import { GET_HOME } from "../../redux/actions/types";
 
 import styles from "./Home.module.css";

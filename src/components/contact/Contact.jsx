@@ -1,11 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Pagination, Popconfirm } from "antd";
 import { AiOutlineDelete, AiOutlineSearch } from "react-icons/ai";
+import { useDispatch, useSelector } from "react-redux";
 
 import useWindowSize from "./../../utility/hooks";
+import { GET_STUDENTS } from "../../redux/actions/types";
+import { getAction } from "../../redux/actions/readAction";
+
 import styles from "./Contact.module.css";
 
 const Contact = () => {
+  const { data } = useSelector((state) => state.studentsReducer);
+  const dispatch = useDispatch();
+
   const { width } = useWindowSize();
   const pageSize = 2;
   // const [data, setData] = useState([]);
@@ -13,10 +20,14 @@ const Contact = () => {
   const [minIndex, setMinIndex] = useState(0);
   const [maxIndex, setMaxIndex] = useState(pageSize);
 
-  const data = [];
+  useEffect(() => {
+    dispatch(getAction("users", GET_STUDENTS));
+  }, [dispatch]);
+console.log(data)
+  const data1 = [];
 
   for (let i = 0; i < 5; i++) {
-    data.push({
+    data1.push({
       key: i,
       num: i + 1,
       nameOfStudent: `Edward King ${i}`,
@@ -36,23 +47,23 @@ const Contact = () => {
       ),
     });
   }
-  const dataMap = data.map(
+  const dataMap = [data].map(
     (d, index) =>
       index >= minIndex &&
       index < maxIndex && (
-        <tr key={d.key}>
-          <td>{d.num}</td>
-          <td>{d.nameOfStudent}</td>
-          <td>{d.tel}</td>
+        <tr key={d.index}>
+          <td>{++index}</td>
+          <td>{d.first_name} {d.last_name[0]}.</td>
+          <td>{d.email}</td>
           <td>
-            {d.route}
+          {!d.active ? 'Active emas!' : 'Active'}
           </td>
           <td>
-            {d.parents}
+            {!d.active ? 'Active emas!' : 'Active'}
           </td>
-          <td>
+          {/* <td>
             {d.parentsTel}
-          </td>
+          </td> */}
           <td>{d.action}</td>
         </tr>
       )
@@ -81,10 +92,10 @@ const Contact = () => {
               <tr>
                 <th>№</th>
                 <th>O’quvchi ismi</th>
-                <th>Telefon nomer</th>
-                <th>Yo'nalish</th>
+                <th>Email</th>
+                <th>Active</th>
                 <th>Ota-ona(F.I.SH)</th>
-                <th>Ota-ona (Tel)</th>
+                {/* <th>Ota-ona (Tel)</th> */}
                 <th> </th>
               </tr>
             </thead>
@@ -98,7 +109,7 @@ const Contact = () => {
           simple
           current={current}
           onChange={onChange}
-          total={data.length}
+          total={data1.length}
           pageSize={pageSize}
         />
       </div>

@@ -23,31 +23,3 @@ api.interceptors.response.use(
 );
 
 export default api;
-
-export const createAction =
-  (path, actionType, formData) =>
-  async (dispatch) => {
-    try {
-      const res = await api.post(path, formData);
-
-      dispatch({
-        type: actionType,
-        payload: res.data,
-      });
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-export const getAction =
-  (path, actionType) => async (dispatch) => {
-    try {
-      const res = await api.get(path);
-      dispatch({
-        type: actionType,
-        payload: res.data,
-      });
-    } catch (err) {
-      console.log(err);
-    }
-  };
