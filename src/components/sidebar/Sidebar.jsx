@@ -8,7 +8,7 @@ import { MdDateRange } from "react-icons/md";
 import { IoLogOutOutline } from "react-icons/io5";
 import { TiMessages } from "react-icons/ti";
 
-import logo from '../../assets/logo.svg'
+import logo from "../../assets/logo.svg";
 
 import styles from "./Sidebar.module.css";
 import Home from "../home/Home";
@@ -54,14 +54,13 @@ const Sidebar = () => {
     },
   ];
   const win = window.location.pathname;
-  const day = date.getDay()
-  const month = date.getMonth()+1
+  const day = date.getDay();
+  const month = date.getMonth() + 1;
   const dataMap = data.map((d) => ({
     key: String(d.id),
     icon: React.createElement(d.icon),
     label: <NavLink to={"/dashboard/" + d.path}>{d.label}</NavLink>,
   }));
-console.log(win)
   return (
     <Layout className={styles.mainWrap}>
       <Sider
@@ -106,7 +105,11 @@ console.log(win)
             style={{ padding: 0, width: "calc(100% - 1px)" }}
           >
             <h1 className={styles.title}>Xisobot</h1>
-            <p>{String(day).length === 1 ? "0"+day : day}.{String(month).length === 1 ? "0"+month : month}.{date.getFullYear()}</p>
+            <p>
+              {String(day).length === 1 ? "0" + day : day}.
+              {String(month).length === 1 ? "0" + month : month}.
+              {date.getFullYear()}
+            </p>
             <div className={styles.end_section_ofHeader}>
               <div className={styles.end_section_ofHeader_icons}>
                 <IoLogOutOutline />
@@ -120,9 +123,9 @@ console.log(win)
               style={{ padding: 24, minHeight: 360 }}
             >
               <Routes>
-                <Route path="/dashboard" element={<Home/>} />
-                <Route path="/dashboard/contact" element={<Contact/>} />
-                <Route path="/dashboard/students" element={<Students/>} />
+                <Route path="/dashboard" element={<Home />} />
+                <Route path="/dashboard/contact" element={<Contact />} />
+                <Route path="/dashboard/students" element={<Students />} />
                 {/* <Route path="/settings" element={<Settings />} />
                 <Route path="/students/*" element={<AllStudents />} />
                 <Route path="/students/add" element={<AddStudents />} />

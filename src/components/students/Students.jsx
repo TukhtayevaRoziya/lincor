@@ -1,11 +1,12 @@
 import React from "react";
+import {AiOutlineDownload} from 'react-icons/ai'
 import Contact from "../contact/Contact";
 import styles from "./Students.module.css";
 
 const Students = () => {
-  const onClick = ()=>{
-    alert('true')
-  }
+  const onClick = () => {
+    alert("true");
+  };
   return (
     <div className={styles.student}>
       <h1 className={styles.title}>Yangi o’quvchi qo’shish </h1>
@@ -35,12 +36,25 @@ const Students = () => {
           <input name="student_tel" type={"number"} />
         </div>
         <div>
-          <label id="student_route">Rasm 3x4</label>
-         <input type={'file'}/>
+          <h1 id="student_picture">Rasm 3x4</h1>
+          <label htmlFor="inp" className={styles.label}>
+            Загрузить аватар
+            <AiOutlineDownload/>
+          </label>
+          <input
+            id="inp"
+            type={"file"}
+            accept="image/*"
+            defaultValue={""}
+            size="60"
+            style={{
+              display: "none",
+            }}
+          />
         </div>
         <button onClick={onClick}>Qo'shish</button>
       </div>
-      <Contact/>
+      <Contact />
     </div>
   );
 };

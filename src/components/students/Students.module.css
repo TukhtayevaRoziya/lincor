@@ -1,4 +1,4 @@
-.student{
+.student {
   margin-bottom: 2rem;
 }
 
@@ -27,7 +27,7 @@
   justify-content: space-between;
   align-items: flex-start;
 }
-
+.inp div h1,
 .inp div label {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -35,13 +35,13 @@
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.02em;
-  color: #C4C4C4;
+  color: #c4c4c4;
 }
 .inp div input,
 .inp div select {
   width: 100%;
   margin-top: 1rem;
-  background: #515C8D;
+  background: #515c8d;
   border: 1px solid rgba(47, 73, 209, 0.6);
   border-radius: 8px;
   font-family: "Inter", sans-serif;
@@ -49,7 +49,7 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
-  color: #C4C4C4;
+  color: #c4c4c4;
   outline: none;
   margin-bottom: 2rem;
   padding: 12px;
@@ -83,20 +83,43 @@
   color: #ffffff;
   cursor: pointer;
 }
+
+.label {
+  background: #515c8d;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px !important;
+  line-height: 22px;
+  color: #c4c4c4;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.label svg{
+  font-size: 20px;
+}
 @media screen and (max-width: 991.9px) {
-  .inp{
+  .inp {
     margin-right: 54px;
   }
   .inp div,
-  .inp button{
+  .inp button {
     width: 32%;
   }
-
+  .inp div h1,
   .inp div label,
-  .inp button{
+  .inp button {
     font-size: 18px;
   }
-
+  .label{
+    font-size: 16px !important;
+  }
+  .label,
   .inp div input,
   .inp div select {
     margin-top: 0.5rem;
@@ -108,22 +131,22 @@
 }
 
 @media screen and (max-width: 600px) {
-  .inp{
+  .inp {
     margin-right: 0;
     margin-top: 1rem;
   }
-  .title{
+  .title {
     font-size: 18px;
     line-height: 40px;
   }
-  .inp{
+  .inp {
     justify-content: flex-start;
   }
   .inp div,
-  .inp button{
+  .inp button {
     width: calc(100% - 54px);
   }
-  .inp button{
+  .inp button {
     margin: 0 auto 2rem 0;
     padding: 8px 0;
   }
